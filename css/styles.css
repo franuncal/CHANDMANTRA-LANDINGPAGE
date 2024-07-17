@@ -100,36 +100,48 @@ header {
 
 /* Sobre Nosotros */
 .sobre-nosotros {
-  padding: 100px 0;
-  background-color: #f8f8f8;
+  padding: 80px 0;
+  background-color: #f8f9fa;
   text-align: center;
 }
 
+.sobre-nosotros .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .sobre-nosotros h2 {
+  text-align: center;
   font-size: 2.5em;
   margin-bottom: 20px;
   color: #333;
 }
 
 .sobre-nosotros p {
-  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-size: 18px;
   line-height: 1.6;
   color: #555;
-  max-width: 800px;
-  margin: 0 auto;
+  text-align: center;
 }
 
 /* Diseños */
 .card-section {
-  padding: 80px 0; /* Espaciado interno */
-  background-color: #f9f9f9; /* Fondo gris claro */
-  text-align: center; /* Centrar texto */
+  padding: 110px 0; /* Espaciado interno */
+  background: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)
+  );
+  text-align: center;
 }
 
 .card-section h2 {
   font-size: 2.5em; /* Tamaño de fuente grande */
-  margin-bottom: 40px; /* Margen inferior */
-  color: #333; /* Color de texto oscuro */
+  margin-bottom: 75px; /* Margen inferior */
+  text-align: center;
+  color: #ececec; /* Color de texto oscuro */
 }
 
 .card-content {
@@ -158,14 +170,19 @@ header {
 }
 
 .card-item h3 {
-  font-size: 1.5em; /* Tamaño de fuente mediano */
-  color: #555; /* Color de texto gris */
+  font-size: 1.5em;
+  color: #555; 
+}
+.card-item p {
+  font-size: 14px; 
+  color: #555; 
+  padding-top: 1.5rem;
 }
 
 /* Como trabajamos */
 .como-trabajamos {
   background-color: #f9f9f9;
-  padding: 50px 20px;
+  padding: 80px 20px;
 }
 
 .como-trabajamos .container {
@@ -199,6 +216,13 @@ header {
   color: #666;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.btn-cta2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
 }
 
 /* Formulario */
@@ -368,7 +392,6 @@ button[type="submit"]:hover {
     bottom: 0;
     background-color: #1c1c1c;
     padding: 2rem;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
   }
 
   .nav.visible {
@@ -398,12 +421,16 @@ button[type="submit"]:hover {
     font-size: 0.9em;
   }
 
+  .sobre-nosotros {
+    padding: 60px 0;
+  }
+
   .sobre-nosotros h2 {
     font-size: 2em;
   }
 
   .sobre-nosotros p {
-    font-size: 1em;
+    font-size: 16px;
   }
 
   .card-section h2 {
@@ -421,6 +448,10 @@ button[type="submit"]:hover {
 
   .como-trabajamos .text {
     margin-bottom: 20px;
+  }
+
+  .como-trabajamos .image {
+    display: none;
   }
 
   .contacto h2 {

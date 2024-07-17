@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(235, 235, 235, 0.7);
+}
+
+.container {
+  max-width: 1360px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #ececec;
+}
+
+.logo {
+  max-width: 5rem;
+  border-radius: 50%;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+/* Banner Inicio */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/img/img-fondos/fondo04.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.banner-content {
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.banner h1 {
+  font-size: 3em;
+  margin: 0 0 20px;
+}
+
+.banner p {
+  font-size: 1.2em;
+  margin: 0 0 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffcc00; /* Color del botón */
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e6b800;
+}
+
+/* Sobre Nosotros */
+.sobre-nosotros {
+  padding: 100px 0;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.sobre-nosotros h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.sobre-nosotros p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Diseños */
+.card-section {
+  padding: 80px 0; /* Espaciado interno */
+  background-color: #f9f9f9; /* Fondo gris claro */
+  text-align: center; /* Centrar texto */
+}
+
+.card-section h2 {
+  font-size: 2.5em; /* Tamaño de fuente grande */
+  margin-bottom: 40px; /* Margen inferior */
+  color: #333; /* Color de texto oscuro */
+}
+
+.card-content {
+  display: grid; /* Mostrar en formato de cuadrícula */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Columnas adaptables */
+  gap: 30px; /* Espacio entre tarjetas */
+  justify-content: center; /* Centrar las tarjetas */
+}
+
+.card-item {
+  background-color: #fff; /* Fondo blanco para cada tarjeta */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.card-item img {
+  width: 100%; /* Ancho completo para la imagen */
+  height: 200px; /* Altura fija para las imágenes */
+  object-fit: cover;
+  border-radius: 8px; /* Bordes redondeados para la imagen */
+  margin-bottom: 15px; /* Margen inferior */
+}
+
+.card-item h3 {
+  font-size: 1.5em; /* Tamaño de fuente mediano */
+  color: #555; /* Color de texto gris */
+}
+
+/* Como trabajamos */
+.como-trabajamos {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+}
+
+.como-trabajamos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px; /* Espacio entre el texto y la imagen */
+}
+
+.como-trabajamos .image,
+.como-trabajamos .text {
+  flex: 1; /* Ocupan el mismo espacio */
+}
+
+.como-trabajamos .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
+}
+
+.como-trabajamos .text h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.como-trabajamos .text p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Formulario */
+.contacto {
+  padding: 60px 0;
+  background-color: #f0f0f0;
+  /* text-align: center; */
+}
+
+.contacto h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 120px;
+}
+
+button[type="submit"] {
+  align-self: center;
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #e6b800;
+}
+
+/* Medios de Pago */
+#pagos-banner {
+  background-color: #f9f9f9; /* Color de fondo del banner */
+  padding: 50px 20px; /* Espaciado alrededor del contenido */
+  text-align: center; /* Centra el texto */
+}
+
+#pagos-banner h2 {
+  margin-bottom: 20px; /* Espacio debajo del título */
+  color: #333; /* Color del texto del título */
+  font-size: 24px; /* Tamaño de la fuente del título */
+  font-weight: bold; /* Negrita para el título */
+}
+
+.medios-de-pago {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.medios-de-pago img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.medios-de-pago img:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el ratón por encima */
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.5em;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffcc00; /* Color de hover */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .abrir-menu {
+    color: #1c1c1c;
+  }
+
+  .cerrar-menu {
+    color: #ececec;
+  }
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav .nav-list {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .nav-list li a {
+    color: #ececec;
+  }
+
+  .banner h1 {
+    font-size: 2.5em;
+  }
+
+  .banner p {
+    font-size: 1em;
+  }
+
+  .cta-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .sobre-nosotros h2 {
+    font-size: 2em;
+  }
+
+  .sobre-nosotros p {
+    font-size: 1em;
+  }
+
+  .card-section h2 {
+    font-size: 2em;
+  }
+
+  .card-item h3 {
+    font-size: 1.3em;
+  }
+
+  .como-trabajamos .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .como-trabajamos .text {
+    margin-bottom: 20px;
+  }
+
+  .contacto h2 {
+    font-size: 2em;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .form-group label {
+    font-size: 1em;
+  }
+
+  button[type="submit"] {
+    padding: 8px 16px;
+    font-size: 1em;
+  }
+
+  .medios-de-pago {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .medios-de-pago img {
+    max-width: 400px;
+  }
+
+  .footer-content {
+    padding: 0 20px;
+  }
+}

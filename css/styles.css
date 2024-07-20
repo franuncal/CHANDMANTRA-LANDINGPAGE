@@ -26,8 +26,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
-  background-color: #ececec;
+  padding: 15px 50px;
+  background-color: #ecececc9;
 }
 
 .logo {
@@ -131,8 +131,8 @@ header {
   padding: 110px 0; /* Espaciado interno */
   background: linear-gradient(
     0deg,
-    rgba(0,0,0,0.6),
-    rgba(0,0,0,0.6)
+    rgba(69, 205, 157, 0.5),
+    rgba(77, 175, 152, 0.51)
   );
   text-align: center;
 }
@@ -141,14 +141,14 @@ header {
   font-size: 2.5em; /* Tamaño de fuente grande */
   margin-bottom: 75px; /* Margen inferior */
   text-align: center;
-  color: #ececec; /* Color de texto oscuro */
+  color: #555; /* Color de texto oscuro */
 }
 
 .card-content {
   display: grid; /* Mostrar en formato de cuadrícula */
   grid-template-columns: repeat(
     auto-fit,
-    minmax(250px, 1fr)
+    minmax(315px, 1fr)
   ); /* Columnas adaptables */
   gap: 30px; /* Espacio entre tarjetas */
   justify-content: center; /* Centrar las tarjetas */
@@ -159,6 +159,11 @@ header {
   padding: 20px; /* Espaciado interno */
   border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s;
+}
+
+.card-item:hover {
+  transform: scale(1.05);
 }
 
 .card-item img {
@@ -319,16 +324,11 @@ button[type="submit"]:hover {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.medios-de-pago img:hover {
-  transform: scale(1.05); /* Efecto de zoom al pasar el ratón por encima */
 }
 
 /* Footer */
 .footer {
-  background-color: #333;
+  background-color: #908d8d;
   color: #fff;
   padding: 40px 0;
   text-align: center;
@@ -477,10 +477,11 @@ button[type="submit"]:hover {
   }
 
   .medios-de-pago img {
-    max-width: 400px;
+    max-width: 300px;
   }
 
   .footer-content {
+    font-size: 0.7rem;
     padding: 0 20px;
   }
 }

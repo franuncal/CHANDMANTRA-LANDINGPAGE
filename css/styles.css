@@ -52,7 +52,7 @@ header {
 }
 
 /* Banner Inicio */
-.banner {
+/* .banner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,9 +68,54 @@ header {
 }
 
 .banner-content {
-  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  background: rgba(0, 0, 0, 0.5); 
   padding: 20px;
   border-radius: 10px;
+}
+
+.banner h1 {
+  font-size: 3em;
+  margin: 0 0 20px;
+}
+
+.banner p {
+  font-size: 1.2em;
+  margin: 0 0 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e6b800;
+} */
+
+/* Banner con img */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative; /* Necesario para el posicionamiento absoluto de la capa de imágenes */
+  overflow: hidden; /* Oculta el contenido desbordado */
+}
+
+.banner-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1; /* Asegura que el contenido esté encima de las imágenes */
 }
 
 .banner h1 {
@@ -96,6 +141,55 @@ header {
 
 .cta-button:hover {
   background-color: #e6b800;
+}
+
+@keyframes slide {
+  0% {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("/img/img-fondos/fondo06.jpg");
+  }
+  33% {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("/img/img-fondos/fondo04.jpg");
+  }
+  66% {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("/img/img-fondos/fondo05.jpg");
+  }
+  100% {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("/img/img-fondos/fondo06.jpg");
+  }
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0; /* Asegura que las imágenes de fondo estén detrás del contenido */
+  animation: slide 15s infinite; /* Duración total del ciclo de animación */
 }
 
 /* Slider */
@@ -472,7 +566,7 @@ button[type="submit"]:hover {
   .slide {
     position: absolute;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     display: flex;

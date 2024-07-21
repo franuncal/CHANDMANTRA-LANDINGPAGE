@@ -26,7 +26,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 50px;
+  padding: 15px 130px;
   background-color: #ecececc9;
 }
 
@@ -98,6 +98,35 @@ header {
   background-color: #e6b800;
 }
 
+/* Slider */
+.slides-container {
+  background-color: #f8f9fa;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  gap: 0.3rem;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: calc(33.333% - 10px);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.slide h2 {
+  letter-spacing: 2px;
+  font-size: 14px;
+  color: #333;
+}
+
+.slide p {
+  font-size: 16px;
+  color: #333;
+}
+
+
 /* Sobre Nosotros */
 .sobre-nosotros {
   padding: 80px 0;
@@ -127,13 +156,14 @@ header {
 }
 
 /* Diseños */
+.card-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .card-section {
   padding: 110px 0; /* Espaciado interno */
-  background: linear-gradient(
-    0deg,
-    rgba(69, 205, 157, 0.5),
-    rgba(77, 175, 152, 0.51)
-  );
   text-align: center;
 }
 
@@ -148,7 +178,7 @@ header {
   display: grid; /* Mostrar en formato de cuadrícula */
   grid-template-columns: repeat(
     auto-fit,
-    minmax(315px, 1fr)
+    minmax(250px, 1fr)
   ); /* Columnas adaptables */
   gap: 30px; /* Espacio entre tarjetas */
   justify-content: center; /* Centrar las tarjetas */
@@ -176,11 +206,11 @@ header {
 
 .card-item h3 {
   font-size: 1.5em;
-  color: #555; 
+  color: #555;
 }
 .card-item p {
-  font-size: 14px; 
-  color: #555; 
+  font-size: 14px;
+  color: #555;
   padding-top: 1.5rem;
 }
 
@@ -419,6 +449,10 @@ button[type="submit"]:hover {
   .cta-button {
     padding: 8px 16px;
     font-size: 0.9em;
+  }
+
+  .slide {
+    width: 100%;
   }
 
   .sobre-nosotros {

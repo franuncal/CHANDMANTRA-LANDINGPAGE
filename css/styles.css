@@ -237,6 +237,8 @@ header {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  object-fit: cover; /* Asegura que las imágenes cubran el contenedor */
+  filter: grayscale(50%) sepia(20%) brightness(0.8) contrast(1.2); /* Aplica efectos de filtro */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -535,8 +537,9 @@ button[type="submit"]:hover {
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: #1c1c1c;
+    background-color: #6d1616;
     padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
   }
 
   .nav.visible {

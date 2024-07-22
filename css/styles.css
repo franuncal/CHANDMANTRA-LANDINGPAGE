@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
 }
 
 html {
@@ -21,6 +21,20 @@ body {
   padding: 0 15px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p,
+a {
+  font-family: "Roboto", sans-serif;
+}
+
 /* Header */
 header {
   display: flex;
@@ -28,6 +42,10 @@ header {
   justify-content: space-between;
   padding: 15px 130px;
   background-color: #ecececc9;
+  position: fixed; /* Fijar el header */
+  width: 100%; /* Asegurar que ocupe todo el ancho de la página */
+  top: 0; /* Fijar en la parte superior de la página */
+  z-index: 1000; /* Asegurar que el header esté por encima de otros elementos */
 }
 
 .logo {
@@ -51,53 +69,6 @@ header {
   display: none;
 }
 
-/* Banner Inicio */
-/* .banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/img/img-fondos/fondo04.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  color: white;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.banner-content {
-  background: rgba(0, 0, 0, 0.5); 
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.banner h1 {
-  font-size: 3em;
-  margin: 0 0 20px;
-}
-
-.banner p {
-  font-size: 1.2em;
-  margin: 0 0 20px;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ffcc00;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #e6b800;
-} */
-
 /* Banner con img */
 .banner {
   display: flex;
@@ -119,22 +90,23 @@ header {
 }
 
 .banner h1 {
-  font-size: 3em;
+  font-size: 4rem;
   margin: 0 0 20px;
 }
 
 .banner p {
-  font-size: 1.2em;
+  font-size: 1.4rem;
   margin: 0 0 20px;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 15px 25px;
   background-color: #ffcc00; /* Color del botón */
   color: black;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 400;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
@@ -268,33 +240,47 @@ header {
 }
 
 .card-content {
-  display: grid; /* Mostrar en formato de cuadrícula */
+  display: grid; 
   grid-template-columns: repeat(
     auto-fit,
     minmax(250px, 1fr)
-  ); /* Columnas adaptables */
-  gap: 30px; /* Espacio entre tarjetas */
+  ); 
+  gap: 30px; 
   justify-content: center; /* Centrar las tarjetas */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar el contenedor horizontalmente */
 }
 
 .card-item {
-  background-color: #fff; /* Fondo blanco para cada tarjeta */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  transition: transform 0.3s;
-}
-
-.card-item:hover {
-  transform: scale(1.05);
+  position: relative;
+  overflow: hidden; /* Asegura que el tinte de color no se desborde */
+  padding: 20px;
+  text-align: center; /* Centrar el contenido de texto */
+  background-color: #fff;
+  border-radius: 10px; /* Opcional: para bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra para darle profundidad */
 }
 
 .card-item img {
-  width: 100%; /* Ancho completo para la imagen */
-  height: 200px; /* Altura fija para las imágenes */
-  object-fit: cover;
-  border-radius: 8px; /* Bordes redondeados para la imagen */
-  margin-bottom: 15px; /* Margen inferior */
+  width: 100%; /* Asegura que las imágenes ocupen todo el ancho de la card */
+  border-radius: 8px;
+  height: 200px; /* Mantiene la proporción de las imágenes */
+  object-fit: cover; /* Asegura que las imágenes cubran el contenedor */
+  filter: grayscale(50%) sepia(20%) brightness(0.8) contrast(1.2); /* Aplica efectos de filtro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s;
+}
+
+.card-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(235, 235, 235, 0.1); /* Color rojo con opacidad del 30% */
+  mix-blend-mode: multiply; /* Mezcla el color con la imagen */
+  pointer-events: none; /* Permite hacer clic en la imagen */
 }
 
 .card-item h3 {
@@ -327,17 +313,24 @@ header {
   flex: 1; /* Ocupan el mismo espacio */
 }
 
+.como-trabajamos .text {
+  background-color: rgba(235, 235, 235, 0.5);
+  padding: 1.7rem;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
 .como-trabajamos .image img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
 }
 
 .como-trabajamos .text h2 {
   color: #333;
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: 2.4rem;
+  margin-bottom: 15px;
 }
 
 .como-trabajamos .text p {
@@ -502,6 +495,18 @@ button[type="submit"]:hover {
     color: #ececec;
   }
 
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #ecececc9;
+    position: fixed; /* Fijar el header */
+    width: 100%; /* Asegurar que ocupe todo el ancho de la página */
+    top: 0; /* Fijar en la parte superior de la página */
+    z-index: 1000; /* Asegurar que el header esté por encima de otros elementos */
+  }
+
   .nav {
     opacity: 0;
     visibility: hidden;
@@ -657,18 +662,3 @@ button[type="submit"]:hover {
     padding: 0 20px;
   }
 }
-
-/* @keyframes slide {
-  0% {
-    transform: translateX(0%);
-  }
-  33.33% {
-    transform: translateX(-100%);
-  }
-  66.66% {
-    transform: translateX(-200%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-} */

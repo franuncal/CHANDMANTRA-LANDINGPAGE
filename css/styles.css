@@ -161,7 +161,7 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 0; /* Asegura que las imágenes de fondo estén detrás del contenido */
-  animation: slide 15s infinite; /* Duración total del ciclo de animación */
+  animation: slide 13s infinite; /* Duración total del ciclo de animación */
 }
 
 /* Slider */

@@ -91,6 +91,7 @@ header {
 
 .banner h1 {
   font-size: 4rem;
+  color: #aa8a6c;
   margin: 0 0 20px;
 }
 
@@ -102,7 +103,7 @@ header {
 .cta-button {
   display: inline-block;
   padding: 15px 25px;
-  background-color: #ffcc00; /* Color del botón */
+  background-color: #e4d1af; /* Color del botón */
   color: black;
   text-decoration: none;
   font-size: 1.2rem;
@@ -112,7 +113,7 @@ header {
 }
 
 .cta-button:hover {
-  background-color: #e6b800;
+  background-color: #ccab89;
 }
 
 @keyframes slide {
@@ -161,7 +162,7 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 0; /* Asegura que las imágenes de fondo estén detrás del contenido */
-  animation: slide 13s infinite; /* Duración total del ciclo de animación */
+  animation: slide 15s infinite; /* Duración total del ciclo de animación */
 }
 
 /* Slider */
@@ -278,6 +279,12 @@ header {
   background-color: #fff;
   border-radius: 10px; /* Opcional: para bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra para darle profundidad */
+  transition: all 0.3s;
+}
+
+.card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card-item img {
@@ -303,8 +310,9 @@ header {
 }
 
 .card-item h3 {
-  font-size: 1.5em;
+  font-size: 1rem;
   color: #555;
+  padding-top: 1rem;
 }
 .card-item p {
   font-size: 14px;
@@ -419,7 +427,7 @@ textarea {
 button[type="submit"] {
   align-self: center;
   display: inline-block;
-  background-color: #ffcc00;
+  background-color: #e4d1af;
   color: #333;
   font-size: 1.2em;
   font-weight: 500;
@@ -431,7 +439,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #e6b800;
+  background-color: #ccab89;
 }
 
 /* Medios de Pago */
@@ -539,7 +547,7 @@ button[type="submit"]:hover {
     bottom: 0;
     background-color: #6d1616;
     padding: 2rem;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
   }
 
   .nav.visible {
@@ -555,7 +563,7 @@ button[type="submit"]:hover {
   .nav-list li a {
     color: #ececec;
   }
-  
+
   /* Banner */
   .banner h1 {
     font-size: 2.5em;

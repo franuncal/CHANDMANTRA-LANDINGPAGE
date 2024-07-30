@@ -195,7 +195,7 @@ header {
 
 /* Sobre Nosotros */
 .sobre-nosotros {
-  padding: 60px 20px;
+  padding: 80px 20px;
   background-color: #f9f9f9;
 }
 
@@ -218,7 +218,8 @@ header {
 .sobre-nosotros .text h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #333;
+  color: #aa8a6c;
+  /* color: #333; */
 }
 
 .sobre-nosotros .text p {
@@ -259,15 +260,16 @@ header {
   font-size: 2.5em; /* Tamaño de fuente grande */
   margin-bottom: 75px; /* Margen inferior */
   text-align: center;
-  color: #555; /* Color de texto oscuro */
+  color: #aa8a6c;
+  /* color: #555;  */
 }
 
 .card-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 30px;
   justify-content: center; /* Centrar las tarjetas */
-  max-width: 1200px; /* Ancho máximo del contenedor */
+  max-width: 1000px; /* Ancho máximo del contenedor */
   margin: 0 auto; /* Centrar el contenedor horizontalmente */
 }
 
@@ -349,13 +351,14 @@ header {
 
 .como-trabajamos .image img {
   max-width: 100%;
-  height: 100%;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */
+  filter: grayscale(50%) sepia(20%) brightness(0.8) contrast(1.2); /* Aplica efectos de filtro */
 }
 
 .como-trabajamos .text h2 {
-  color: #333;
+  color: #aa8a6c;
   font-size: 2.4rem;
   margin-bottom: 15px;
 }
@@ -377,13 +380,12 @@ header {
 .contacto {
   padding: 60px 0;
   background-color: #f0f0f0;
-  /* text-align: center; */
 }
 
 .contacto h2 {
   font-size: 2.5em;
   margin-bottom: 30px;
-  color: #333;
+  color: #aa8a6c;
   text-align: center;
 }
 
@@ -471,7 +473,7 @@ button[type="submit"]:hover {
 
 /* Footer */
 .footer {
-  background-color: #908d8d;
+  background-color: #333;
   color: #fff;
   padding: 40px 0;
   text-align: center;
@@ -500,7 +502,7 @@ button[type="submit"]:hover {
 }
 
 .social-icons a:hover {
-  color: #ffcc00; /* Color de hover */
+  color: #ccab89; /* Color de hover */
 }
 
 /* Media Queries para dispositivos móviles */
@@ -592,6 +594,11 @@ button[type="submit"]:hover {
     margin-bottom: 30px;
   }
 
+  .sobre-nosotros .vm-text {
+    display: none;
+  }
+
+
   .sobre-nosotros .image {
     display: none;
   }
@@ -659,8 +666,17 @@ button[type="submit"]:hover {
     text-align: center;
   }
 
+  .como-trabajamos .text h2 {
+    margin-bottom: 20px;
+    text-align: start;
+  }
   .como-trabajamos .text {
     margin-bottom: 20px;
+    text-align: start;
+  }
+
+  .como-trabajamos .vm-text {
+    display: none;
   }
 
   .como-trabajamos .image {

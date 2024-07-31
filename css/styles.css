@@ -322,6 +322,7 @@ header {
   padding-top: 1.5rem;
 }
 
+
 /* Como trabajamos */
 .como-trabajamos {
   background-color: #f9f9f9;
@@ -444,38 +445,11 @@ button[type="submit"]:hover {
   background-color: #ccab89;
 }
 
-/* Medios de Pago */
-#pagos-banner {
-  background-color: #f9f9f9; /* Color de fondo del banner */
-  padding: 50px 20px; /* Espaciado alrededor del contenido */
-  text-align: center; /* Centra el texto */
-}
-
-#pagos-banner h2 {
-  margin-bottom: 20px; /* Espacio debajo del título */
-  color: #333; /* Color del texto del título */
-  font-size: 24px; /* Tamaño de la fuente del título */
-  font-weight: bold; /* Negrita para el título */
-}
-
-.medios-de-pago {
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.medios-de-pago img {
-  max-width: 500px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 /* Footer */
 .footer {
-  background-color: #333;
+  background-color: #999;
   color: #fff;
-  padding: 40px 0;
+  padding: 60px 0;
   text-align: center;
 }
 
@@ -498,7 +472,7 @@ button[type="submit"]:hover {
   margin: 0 10px;
   font-size: 1.5em;
   color: #fff;
-  transition: color 0.3s;
+  transition: color 0.25s;
 }
 
 .social-icons a:hover {

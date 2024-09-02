@@ -56,10 +56,11 @@ header {
 .nav-list {
   list-style-type: none;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .nav-list li a {
+  font-size: 1.2em;
   text-decoration: none;
   color: #1c1c1c;
 }
@@ -67,6 +68,14 @@ header {
 .abrir-menu,
 .cerrar-menu {
   display: none;
+}
+
+.social-icons-nav a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.2em;
+  color: #aa8a6c;
+  transition: color 0.3s;
 }
 
 /* Banner con img */
@@ -204,7 +213,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 50px;
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -218,7 +227,7 @@ header {
 .sobre-nosotros .text h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #aa8a6c;
+  color: #1c1c1c;
   /* color: #333; */
 }
 
@@ -260,7 +269,7 @@ header {
   font-size: 2.5em; /* Tamaño de fuente grande */
   margin-bottom: 75px; /* Margen inferior */
   text-align: center;
-  color: #aa8a6c;
+  color: #1c1c1c;
   /* color: #555;  */
 }
 
@@ -322,7 +331,6 @@ header {
   padding-top: 1.5rem;
 }
 
-
 /* Como trabajamos */
 .como-trabajamos {
   background-color: #f9f9f9;
@@ -359,7 +367,7 @@ header {
 }
 
 .como-trabajamos .text h2 {
-  color: #aa8a6c;
+  color: #1c1c1c;
   font-size: 2.4rem;
   margin-bottom: 15px;
 }
@@ -447,7 +455,7 @@ button[type="submit"]:hover {
 
 /* Footer */
 .footer {
-  background-color: #999;
+  background-color: #ccc;
   color: #fff;
   padding: 60px 0;
   text-align: center;
@@ -521,7 +529,7 @@ button[type="submit"]:hover {
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: #6d1616;
+    background-color: #1c1c1c;
     padding: 2rem;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
   }
@@ -571,7 +579,6 @@ button[type="submit"]:hover {
   .sobre-nosotros .vm-text {
     display: none;
   }
-
 
   .sobre-nosotros .image {
     display: none;

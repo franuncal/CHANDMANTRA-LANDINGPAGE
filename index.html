@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chand Mantra - Espejos de Diseño</title>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -25,6 +30,19 @@
           <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
           <li><a href="#card">Diseños</a></li>
           <li><a href="#contacto">Contacto</a></li>
+          <div class="social-icons-nav">
+            <a href="https://www.instagram.com/chand.mantra/" target="_blank">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="mailto:angelesdadea@gmail.com"
+              ><i class="bi bi-envelope"></i
+            ></a>
+            <a
+              href="https://wa.me/2324501436?text=Hola,quiero..."
+              target="_blank"
+              ><i class="bi bi-whatsapp"></i
+            ></a>
+          </div>
         </ul>
       </nav>
     </header>
@@ -40,7 +58,11 @@
       </div>
     </section>
 
-    <section class="slides-container">
+    <section
+      class="slides-container"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="slide">
         <h2><i class="bi bi-truck"></i> ENVIAMOS TU ESPEJO</h2>
         <p>Envíos a Todo el Pais</p>
@@ -58,7 +80,12 @@
       </div>
     </section>
 
-    <section class="sobre-nosotros" id="sobre-nosotros">
+    <section
+      class="sobre-nosotros"
+      id="sobre-nosotros"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="container">
         <div class="text">
           <h2>Sobre Nosotros</h2>
@@ -132,7 +159,12 @@
       </div>
     </section>
 
-    <section class="como-trabajamos" id="como-trabajamos">
+    <section
+      class="como-trabajamos"
+      id="como-trabajamos"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+    >
       <div class="container">
         <div class="image">
           <img
@@ -194,7 +226,11 @@
       </div>
     </section>
 
-    <section class="slides-container">
+    <section
+      class="slides-container"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="slide">
         <h2><i class="bi bi-truck"></i> ENVIAMOS TU ESPEJO</h2>
         <p>Envíos a Todo el Pais</p>
@@ -223,13 +259,18 @@
           <a href="https://www.instagram.com/chand.mantra/" target="_blank">
             <i class="bi bi-instagram"></i>
           </a>
-          <a href="https://www.instagram.com/chand.mantra/" target="_blank">
+          <a
+            href="https://wa.me/2324501436?text=Hola,quiero..."
+            target="_blank"
+          >
             <i class="bi bi-whatsapp"></i>
           </a>
         </div>
       </div>
     </footer>
-
+    <script>
+      AOS.init();
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>

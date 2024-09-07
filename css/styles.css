@@ -550,9 +550,9 @@ button[type="submit"]:hover {
 }
 
 .web a {
-  text-decoration: none;
+  text-decoration: solid;
   margin: 0 10px;
-  font-size: 1em;
+  font-size: 1.2em;
   color: #fff;
 }
 
@@ -563,7 +563,7 @@ button[type="submit"]:hover {
     border: 0;
     font-size: 1.25rem;
     color: #1c1c1c;
-    background-color: transparent !important;
+    background-color: transparent;
     cursor: pointer;
   }
 
@@ -574,6 +574,13 @@ button[type="submit"]:hover {
     color: #ececec;
     background-color: transparent;
     cursor: pointer;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
   }
 
   .nav {

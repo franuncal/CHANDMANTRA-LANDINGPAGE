@@ -135,7 +135,7 @@ header {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("/img/img-fondos/fondo04.jpg");
+    url("/img/img-fotosVF/img10.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -419,7 +419,7 @@ header {
 }
 
 .como-trabajamos .image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la imagen */

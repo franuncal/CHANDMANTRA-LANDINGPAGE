@@ -124,12 +124,12 @@ span.onclick = function () {
   modal.style.display = "none";
 };
 
-// Cerrar el modal haciendo clic fuera del modal
-window.onclick = function (event) {
-  if (event.target == modal) {
+// Cerrar el modal haciendo clic fuera de la imagen
+modal.addEventListener("click", function (event) {
+  if (event.target === modal) {
     modal.style.display = "none";
   }
-};
+});
 
 // Cerrar el modal presionando la tecla "Escape"
 window.addEventListener("keydown", function (event) {
@@ -137,9 +137,3 @@ window.addEventListener("keydown", function (event) {
     modal.style.display = "none";
   }
 });
-
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};

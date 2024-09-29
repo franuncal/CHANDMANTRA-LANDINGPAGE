@@ -831,19 +831,24 @@ header {
 
   /* Modal IMG */
   .modal-content {
-    margin: 10% auto; /* Ajustar margen para pantallas pequeñas */
+    margin: 50% auto; /* Ajustar margen para pantallas pequeñas */
+    position: relative; /* Necesario para posicionar la X en relación a .modal-content */
   }
 
   .close {
-    font-size: 30px; /* Tamaño de la X en pantallas pequeñas */
+    font-size: 40px; /* Tamaño de la X en pantallas pequeñas */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 10px; /* Ajustar la distancia desde la parte superior */
+    right: 20px; /* Ajustar la distancia desde la derecha */
+    color: #fff; /* Cambia el color de la X según tu diseño */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la X */
   }
 
   .prev,
   .next {
-    padding: 10px; /* Ajustar tamaño de los botones */
-    font-size: 20px; /* Tamaño de la fuente en botones */
+    padding: 15px; /* Ajustar tamaño de los botones */
+    font-size: 15px; /* Tamaño de la fuente en botones */
   }
-
   .como-trabajamos .container {
     flex-direction: column;
     text-align: center;

@@ -872,14 +872,8 @@ header {
     align-items: center;
   }
 
-  .contacto .contact-form,
-  .contacto .text {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .contacto .contact-form button {
-    width: 100%;
+  .text-vm-3 {
+    display: none;
   }
 
   .footer-content {

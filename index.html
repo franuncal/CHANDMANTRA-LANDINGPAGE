@@ -53,8 +53,8 @@
       <div class="banner-content">
         <h1>CHAND MANTRA</h1>
         <p>
-          "Descubri la magia de nuestros espejos artesanales, diseñados con amor
-          para transformar tu hogar con estilo único."
+          Descubri la magia de nuestros espejos artesanales, diseñados con amor
+          para transformar tu hogar con estilo único.
         </p>
         <a href="#contacto" class="cta-button">Contáctanos</a>
       </div>
@@ -108,10 +108,7 @@
           </p>
         </div>
         <div class="image">
-          <img
-            src="/img/img-fotosVF/img21.jpg"
-            alt="Descripción de la imagen"
-          />
+          <img src="/img/img-fotosVF/faseluna.jpg" alt="Fases de la Luna" />
         </div>
       </div>
     </section>
@@ -122,7 +119,7 @@
         <h2>Diseños Personalizados</h2>
         <div class="card-content" id="card-content">
           <div class="card-item">
-            <img src="/img/img-galeria/cm01.jpg" alt="Diseño 1" />
+            <img src="/img/img-fotosVF/floto1.jpg" alt="Flor de Loto" />
             <h3>FLOR DE LOTO</h3>
             <p>$ 120.000,00</p>
             <p>3 cuotas sin interés de $40.000,00</p>
@@ -135,69 +132,34 @@
             </div>
           </div>
           <div class="card-item">
-            <img src="/img/img-galeria/cm07.jpg" alt="Diseño 2" />
+            <img src="/img/img-fotosVF/fatima4.jpg" alt="Mano de Fatima" />
             <h3>MANO DE FATIMA</h3>
             <p>$ 120.000,00</p>
             <p>3 cuotas sin interés de $40.000,00</p>
-            <div class="mp-btn">
-              <script
-                src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-                data-preference-id="145048120-b1ecde50-13c3-4559-abe3-541f9706b3a9"
-                data-source="button"
-              ></script>
-            </div>
           </div>
           <div class="card-item">
-            <img src="/img/img-galeria/cm09.jpg" alt="Diseño 2" />
-            <h3>FLOR DE LA VIDA</h3>
+            <img src="/img/img-fotosVF/flores1.jpg" alt="Flor de la Vida" />
+            <h3>FLORES COLORES</h3>
             <p>$ 120.000,00</p>
             <p>3 cuotas sin interés de $40.000,00</p>
-            <div class="mp-btn">
-              <script
-                src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-                data-preference-id="145048120-b1ecde50-13c3-4559-abe3-541f9706b3a9"
-                data-source="button"
-              ></script>
-            </div>
           </div>
           <div class="card-item">
-            <img src="/img/img-galeria/cm06.jpg" alt="Diseño 2" />
+            <img src="/img/img-fotosVF/mandala3.jpg" alt="Mandala" />
             <h3>MANDALA</h3>
             <p>$ 120.000,00</p>
             <p>3 cuotas sin interés de $40.000,00</p>
-            <div class="mp-btn">
-              <script
-                src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-                data-preference-id="145048120-b1ecde50-13c3-4559-abe3-541f9706b3a9"
-                data-source="button"
-              ></script>
-            </div>
           </div>
           <div class="card-item">
-            <img src="/img/img-galeria/cm05.jpg" alt="Diseño 1" />
+            <img src="/img/img-fotosVF/frida1.jpg" alt="Frida" />
             <h3>FRIDA</h3>
             <p>$ 120.000,00</p>
             <p>3 cuotas sin interés de $40.000,00</p>
-            <div class="mp-btn">
-              <script
-                src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-                data-preference-id="145048120-b1ecde50-13c3-4559-abe3-541f9706b3a9"
-                data-source="button"
-              ></script>
-            </div>
           </div>
           <div class="card-item">
-            <img src="/img/img-galeria/cm04.jpg" alt="Diseño 2" />
+            <img src="/img/img-fotosVF/peonia.jpg" alt="Rosa Peonia" />
             <h3>ROSA PEONIA</h3>
             <p>$ 120.000,00</p>
             <p>3 cuotas sin interés de $40.000,00</p>
-            <div class="mp-btn">
-              <script
-                src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-                data-preference-id="145048120-b1ecde50-13c3-4559-abe3-541f9706b3a9"
-                data-source="button"
-              ></script>
-            </div>
           </div>
         </div>
         <div class="btn-cta2">
@@ -206,12 +168,23 @@
       </div>
     </section>
 
+    <!-- Modal con botones Next y Prev -->
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="" alt="Producto" />
+        <!-- Botones para navegar entre imágenes -->
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+      </div>
+    </div>
+
     <!-- Como Trabajamos -->
     <section class="como-trabajamos" id="como-trabajamos">
       <div class="container">
         <div class="image">
           <img
-            src="/img/img-galeria/trabajo1.png"
+            src="/img/img-fotosVF/trabajo1.png"
             alt="Descripción de la imagen"
           />
         </div>
@@ -245,7 +218,7 @@
     </section>
 
     <!-- Contacto Form -->
-    <section class="contacto" id="contacto">
+    <!-- <section class="contacto" id="contacto">
       <div class="container">
         <div class="text">
           <h2>¿Te gustaría un diseño único?</h2>
@@ -292,17 +265,54 @@
               name="_subject"
               value="¡Tienes un Nuevo Mensaje!"
             />
-            <!-- Desabiolita CAPTCHA -->
+        
             <input type="hidden" name="_captcha" value="false" />
-            <!-- Respuesta Automatica -->
+            
             <input
               type="hidden"
               name="_autoresponse"
               value="your custom message"
             />
-            <!-- Formato de recepcion de mail -->
+            
             <input type="hidden" name="_template" value="box" />
           </form>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Contacto -->
+    <section class="contacto" id="contacto">
+      <div class="container">
+        <div class="text">
+          <h2>¿Te gustaría un diseño único?</h2>
+          <p>
+            Contáctanos para recibir más información sobre nuestros procesos de
+            diseño a medida. <br />
+            Trabajamos con vos en cada paso, desde el concepto hasta la entrega
+            final. <br />
+            <br />
+            ¡No esperes más, estamos ansiosos por conocerte y hacer realidad el
+            diseño de tus sueños!
+          </p>
+        </div>
+        <div class="contact-icons">
+          <h2>Contáctanos</h2>
+          <div class="icons">
+            <a
+              href="https://wa.me/2324501436?text=Hola,quiero..."
+              target="_blank"
+              ><i class="bi bi-whatsapp"></i>
+              <p>Whatsapp</p>
+            </a>
+            <a href="mailto:angelesdadea@gmail.com"
+              ><i class="bi bi-envelope"></i>
+              <p>Email</p>
+            </a>
+            <a href="https://www.instagram.com/chand.mantra/" target="_blank">
+              <i class="bi bi-instagram"></i>
+              <p>Instagram</p>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -337,9 +347,6 @@
           <a href="https://www.instagram.com/chand.mantra/" target="_blank">
             <i class="bi bi-instagram"></i>
           </a>
-        </div>
-        <div class="web">
-          <p>Diseño Web || <a href="mailto:unquidev@gmail.com">Unqui Dev</a></p>
         </div>
       </div>
     </footer>

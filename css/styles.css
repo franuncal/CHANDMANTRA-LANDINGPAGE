@@ -135,8 +135,8 @@ header {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("/img/img-fotosVF/img10.jpg");
-  background-position: center top;
+    url("/img/img-fotosVF/flores7.jpg");
+  background-position: center right top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 95vh;
@@ -325,7 +325,6 @@ header {
   margin-bottom: 75px; /* Margen inferior */
   text-align: center;
   color: #1c1c1c;
-  /* color: #555;  */
 }
 
 .card-content {
@@ -338,6 +337,7 @@ header {
 }
 
 .card-item {
+  cursor: pointer;
   position: relative;
   overflow: hidden; /* Asegura que el tinte de color no se desborde */
   padding: 20px;
@@ -380,6 +380,7 @@ header {
   color: #555;
   padding-top: 1rem;
 }
+
 .card-item p {
   font-size: 14px;
   color: #555;
@@ -389,6 +390,88 @@ header {
 .card-item .mp-btn {
   margin: 0 auto;
   padding-top: 30px;
+}
+
+/* Modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  padding: 20px;
+  width: 60%; /* Cambiar el tamaño del modal */
+  max-width: 600px; /* Limitar el ancho */
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%; /* O puedes usar un tamaño específico si lo prefieres */
+  max-height: 80vh; /* Limita la altura máxima para que no se salga del modal */
+  object-fit: contain; /* Mantiene la proporción original de la imagen */
+  border-radius: 10px; /* Añade bordes redondeados si lo prefieres */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Botones "Prev" y "Next" */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.3s;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+/* Posición del botón "Prev" */
+.prev {
+  left: 10px;
+}
+
+/* Posición del botón "Next" */
+.next {
+  right: 10px;
+}
+
+/* Cambia el color al pasar el cursor sobre los botones */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Como trabajamos */
@@ -449,26 +532,25 @@ header {
 .contacto {
   background-color: #f9f9f9;
   padding: 80px 20px;
+  text-align: center; /* Centrar todo el texto y los iconos */
 }
 
 .contacto .container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 80px; /* Espacio entre el texto y el formulario */
+  flex-direction: column; /* Cambia a columna */
+  align-items: center; /* Centra el contenido */
+  gap: 40px; /* Espacio entre el texto y los iconos */
 }
 
-.contacto .text,
-.contacto .contact-form {
-  flex: 1; /* Ocupan el mismo espacio */
-  background-color: rgba(235, 235, 235);
+.contacto .text {
+  background-color: rgba(235, 235, 235, 0.5);
   padding: 1.7rem;
+  margin: 0 auto;
   border-radius: 20px;
 }
 
-/* Estilos para el texto de contacto */
 .contacto .text h2 {
   color: #1c1c1c;
   font-size: 2.4rem;
@@ -476,51 +558,51 @@ header {
 }
 
 .contacto .text p {
-  color: #666;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Estilos para el formulario */
-.contacto .form-group {
-  margin-bottom: 1.3rem; /* Más espacio entre cada grupo del formulario */
-}
-
-.contacto .contact-form h2 {
   color: #1c1c1c;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.contact-icons {
+  background-color: rgba(235, 235, 235);
+  padding: 1.7rem;
+  border-radius: 20px;
+}
+
+.contact-icons h2 {
+  color: #aa8a6c;
   font-size: 2.4rem;
   margin-bottom: 15px;
 }
 
-.contacto .form-group label {
-  color: #666;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  display: block;
+/* Estilos para los iconos de contacto */
+.icons {
+  display: flex;
+  justify-content: center; /* Centra los iconos */
+  gap: 30px; /* Espacio entre los iconos */
 }
 
-.contacto .form-group input,
-.contacto .form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
+.icons p {
+  text-decoration: none;
 }
 
-.contacto .form-group button {
-  font-size: 1.1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #e4d1af;
-  color: #1c1c1c;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 1rem;
+.icons a {
+  display: inline-block;
+  /* border: 2px solid #aa8a6c; */
+  border-radius: 50%;
+  padding: 7px; /* Reducir el padding de los iconos */
+  background-color: transparent;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.contacto .form-group button:hover {
+.icons a i {
+  color: #aa8a6c;
+  font-size: 1.7rem; /* Reducir el tamaño del ícono */
+}
+
+.icons a:hover {
   background-color: #aa8a6c;
+  transform: scale(1.1);
 }
 
 /* Footer */

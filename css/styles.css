@@ -138,13 +138,13 @@ header {
     url("/img/img-fotosVF/flores6.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 103%;
   height: 100vh;
   color: white;
   text-align: center;
   padding: 0 20px;
-  position: relative; /* Necesario para el posicionamiento absoluto de la capa de imágenes */
-  overflow: hidden; /* Oculta el contenido desbordado */
+  position: relative;
+  overflow: hidden;
 }
 
 .banner-content {

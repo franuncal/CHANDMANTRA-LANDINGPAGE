@@ -474,6 +474,22 @@ header {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Estilos para el banner promocional con imagen */
+.promo-banner {
+  position: relative;
+  width: 100%;
+  height: auto; /* Ajusta el tamaño para hacerlo más angosto */
+  overflow: hidden;
+  background-color: #f4f4f4; /* Si la imagen no cubre el 100%, un color de fondo */
+  text-align: center;
+}
+
+.promo-banner img {
+  max-width: 100%;
+  height: auto; /* Asegúrate de que la imagen se ajuste */
+  object-fit: cover; /* Para mantener proporciones */
+}
+
 /* Como trabajamos */
 .como-trabajamos {
   background-color: #f9f9f9;
@@ -570,7 +586,7 @@ header {
 }
 
 .contact-icons h2 {
-  color: #aa8a6c;
+  color: #1c1c1c;
   font-size: 2.4rem;
   margin-bottom: 15px;
 }
@@ -597,12 +613,11 @@ header {
 
 .icons a i {
   color: #aa8a6c;
-  font-size: 1.7rem; /* Reducir el tamaño del ícono */
+  font-size: 1.9rem; /* Reducir el tamaño del ícono */
 }
 
 .icons a:hover {
-  background-color: #aa8a6c;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 /* Footer */

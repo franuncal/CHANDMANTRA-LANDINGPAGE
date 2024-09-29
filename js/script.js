@@ -47,9 +47,6 @@ let productImages = {
     "/img/img-fotosVF/flores7.jpg",
     "/img/img-fotosVF/flores8.jpg",
     "/img/img-fotosVF/flores9.jpg",
-    // "/img/img-fotosVF/fvida.jpg",
-    // "/img/img-fotosVF/fvida2.jpg",
-    // "/img/img-fotosVF/fvida3.jpg",
   ],
   MANDALA: [
     "/img/img-fotosVF/mandala.jpg",
@@ -109,11 +106,25 @@ next.addEventListener("click", function () {
   showImage(images, currentImageIndex);
 });
 
-// Cerrar el modal
+// Cerrar el modal con el botón "X"
 let span = document.getElementsByClassName("close")[0];
 span.onclick = function () {
   modal.style.display = "none";
 };
+
+// Cerrar el modal haciendo clic fuera del modal
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+// Cerrar el modal presionando la tecla "Escape"
+window.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    modal.style.display = "none";
+  }
+});
 
 window.onclick = function (event) {
   if (event.target == modal) {

@@ -1,14 +1,26 @@
-// Menu Hamburguesa
-const nav = document.querySelector("#nav");
-const abrir = document.querySelector("#abrir");
-const cerrar = document.querySelector("#cerrar");
+document.addEventListener("DOMContentLoaded", () => {
+  // Menu Hamburguesa
+  const nav = document.querySelector("#nav");
+  const abrir = document.querySelector("#abrir");
+  const cerrar = document.querySelector("#cerrar");
+  const navLinks = document.querySelectorAll(".nav-list li a");
 
-abrir.addEventListener("click", () => {
-  nav.classList.add("visible");
-});
+  abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
+  });
 
-cerrar.addEventListener("click", () => {
-  nav.classList.remove("visible");
+  cerrar.addEventListener("click", () => {
+    nav.classList.remove("visible");
+  });
+
+  // Agregar un evento de clic a cada enlace
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      // Cerrar el menú
+      const nav = document.querySelector(".nav");
+      nav.classList.remove("visible");
+    });
+  });
 });
 
 // Modal Cards

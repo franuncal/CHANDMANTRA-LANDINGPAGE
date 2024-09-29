@@ -135,11 +135,11 @@ header {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("/img/img-fotosVF/flores7.jpg");
-  background-position: center right top;
+    url("/img/img-fotosVF/flores6.jpg");
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 95vh;
+  height: 100vh;
   color: white;
   text-align: center;
   padding: 0 20px;
@@ -675,16 +675,13 @@ header {
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
   .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 30px;
+    padding: 20px 15px;
   }
 
   .abrir-menu {
     display: block;
     border: 0;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #1c1c1c;
     background-color: transparent;
     cursor: pointer;
@@ -693,7 +690,7 @@ header {
   .cerrar-menu {
     display: block;
     border: 0;
-    font-size: 1.25rem;
+    font-size: 1.7rem;
     color: #ececec;
     background-color: transparent;
     cursor: pointer;
@@ -726,7 +723,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 1rem;
+    font-size: 1.3rem;
+    gap: 2rem;
   }
 
   .nav-list li a {
@@ -829,6 +827,21 @@ header {
 
   .card-item h3 {
     font-size: 1.3em;
+  }
+
+  /* Modal IMG */
+  .modal-content {
+    margin: 10% auto; /* Ajustar margen para pantallas pequeñas */
+  }
+
+  .close {
+    font-size: 30px; /* Tamaño de la X en pantallas pequeñas */
+  }
+
+  .prev,
+  .next {
+    padding: 10px; /* Ajustar tamaño de los botones */
+    font-size: 20px; /* Tamaño de la fuente en botones */
   }
 
   .como-trabajamos .container {

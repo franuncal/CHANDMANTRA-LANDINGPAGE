@@ -155,14 +155,15 @@ header {
 }
 
 .banner h1 {
-  font-size: 4rem;
+  font-size: 4.8rem;
   color: #aa8a6c;
   margin: 0 0 20px;
 }
 
-.banner p {
-  font-size: 1.4rem;
-  margin: 0 0 20px;
+.banner h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  margin: 0 0 40px;
 }
 
 .cta-button {

@@ -49,9 +49,7 @@ let productImages = {
     "/img/img-fotosVF/fatima5.jpg",
     "/img/img-fotosVF/fatima6.jpg",
   ],
-  "FLORES COLORES": [
-    "/img/img-fotosVF/flores1.jpg",
-    "/img/img-fotosVF/flores2.jpg",
+  "CUADRO TRÍPTICO DE MULATAS": [
     "/img/img-fotosVF/flores3.jpg",
     "/img/img-fotosVF/flores4.jpg",
     "/img/img-fotosVF/flores5.jpg",
@@ -71,9 +69,11 @@ let productImages = {
     "/img/img-fotosVF/frida1.jpg",
     "/img/img-fotosVF/frida2.jpg",
   ],
-  "ROSA PEONIA": [
-    "/img/img-fotosVF/peonia.jpg",
-    "/img/img-fotosVF/peonia1.jpg",
+  BUDA: [
+    "/img/img-fotosVF/buda.jpg",
+    "/img/img-fotosVF/buda2.jpg",
+    "/img/img-fotosVF/buda3.jpg",
+    "/img/img-fotosVF/buda4.jpg",
   ],
 };
 

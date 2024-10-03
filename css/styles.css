@@ -379,7 +379,14 @@ header {
 }
 
 .card-item p {
-  font-size: 14px;
+  font-size: 1rem;
+  color: #555;
+  padding-top: 1.5rem;
+  font-weight: bold;
+}
+
+.card-item .card-medidas {
+  font-size: 0.9rem;
   color: #555;
   padding-top: 1.5rem;
 }

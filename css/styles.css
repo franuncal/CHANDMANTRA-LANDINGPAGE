@@ -40,7 +40,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 100px;
+  padding: 1rem 5rem;
   background-color: #ecececc9;
   position: fixed;
   width: 100%;
@@ -151,20 +151,31 @@ header {
   background: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
-  z-index: 1; /* Asegura que el contenido esté encima de las imágenes */
+  z-index: 1;
 }
 
 .banner h1 {
   font-size: 4.8rem;
   color: #aa8a6c;
   margin: 0 0 20px;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s ease forwards;
 }
 
 .banner h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   margin: 0 0 40px;
   font-style: oblique;
+  transform: translateY(30px);
+  animation: fadeInUp 2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .cta-button {
@@ -182,41 +193,6 @@ header {
 .cta-button:hover {
   background-color: #ccab89;
 }
-
-/* @keyframes slide {
-  0% {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.6)
-      ),
-      url("/img/img-fondos/fondo06.jpg");
-  }
-  33% {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.6)
-      ),
-      url("/img/img-fondos/fondo04.jpg");
-  }
-  66% {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.6)
-      ),
-      url("/img/img-fondos/fondo05.jpg");
-  }
-  100% {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.6)
-      ),
-      url("/img/img-fondos/fondo06.jpg");
-  }
-} */
 
 .banner::before {
   content: "";
@@ -286,7 +262,16 @@ header {
   font-size: 2.5em;
   margin-bottom: 20px;
   color: #1c1c1c;
-  /* color: #333; */
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 1.5s ease forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .sobre-nosotros .text p {
@@ -336,6 +321,16 @@ header {
   justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 2.5s ease forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .card-item {
@@ -677,9 +672,14 @@ header {
 }
 
 /* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .header {
-    padding: 20px 15px;
+    background-color: #000;
+    padding: 0.7rem 2rem;
+    height: 100px; /* Mantén la altura del header */
+    position: fixed; /* Mantén el header fijo en la parte superior */
+    width: 100%; /* Asegúrate de que el header ocupe todo el ancho */
+    z-index: 10; /* Asegúrate de que esté por encima del banner */
   }
 
   .abrir-menu {
@@ -744,17 +744,31 @@ header {
   }
 
   /* Banner */
+  .banner {
+    /* margin-top: 20px; */
+    height: 75vh;
+    background-position: center bottom;
+  }
+
+  .banner-content {
+    margin-top: 40px;
+  }
+
   .banner h1 {
-    font-size: 2.1rem;
+    font-size: 1.9rem;
   }
 
   .banner h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+
+  .vm-text {
+    display: none;
   }
 
   .cta-button {
     padding: 8px 8px;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   /* Sobre Nosotros */
